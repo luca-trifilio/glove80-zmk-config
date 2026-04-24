@@ -147,6 +147,39 @@
         };
     };
 
+    underglow-layer {
+        compatible = "zmk,underglow-layer";
+
+        /*
+         * Color scheme:
+         *   PURPLE  = pinky column
+         *   BLUE    = ring column
+         *   GREEN   = middle column
+         *   ORANGE  = index columns (inner + outer)
+         *   RED     = home row mods (A S D F  J K L ;)
+         *   YELLOW  = thumb cluster keys
+         *   ___     = off (F-keys, number row, misc)
+         */
+
+        base {
+            bindings = <
+/* row 1: F-keys — all off */
+&ug ___    &ug ___    &ug ___    &ug ___    &ug ___                                                                                      &ug ___    &ug ___    &ug ___    &ug ___    &ug ___
+/* row 2: number row — all off */
+&ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___                                                              &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___
+/* row 3: Q W E R T  /  Y U I O P */
+&ug PURPLE &ug BLUE   &ug GREEN  &ug ORANGE &ug ORANGE &ug ORANGE                                                           &ug ORANGE &ug ORANGE &ug ORANGE &ug GREEN  &ug BLUE   &ug PURPLE
+/* row 4: A S D F G  /  H J K L ; — home row mods get RED */
+&ug PURPLE &ug RED    &ug RED    &ug RED    &ug RED    &ug ORANGE                                                           &ug ORANGE &ug RED    &ug RED    &ug RED    &ug RED    &ug PURPLE
+/* row 5: Z X C V B  /  N M , . /  + thumbs */
+&ug PURPLE &ug BLUE   &ug GREEN  &ug ORANGE &ug ORANGE &ug ORANGE &ug YELLOW &ug YELLOW &ug YELLOW  &ug YELLOW &ug YELLOW &ug YELLOW &ug ORANGE &ug ORANGE &ug GREEN  &ug GREEN  &ug BLUE   &ug PURPLE
+/* row 6: bottom nav + thumbs */
+&ug PURPLE &ug ___    &ug ___    &ug ___    &ug ___               &ug YELLOW &ug YELLOW &ug YELLOW  &ug YELLOW &ug YELLOW &ug YELLOW            &ug ___    &ug ___    &ug ___    &ug ___    &ug PURPLE
+            >;
+            layer-id = <LAYER_Base>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
