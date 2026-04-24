@@ -38,3 +38,20 @@ hold-trigger-key-positions = <KEYS_RIGHT THUMBS_RIGHT>; // or LEFT for right-han
 ```
 
 `hold-trigger-key-positions` restricts hold activation to the opposite hand — prevents misfires when rolling keys on the same hand. `esc_ctrl` uses the same params as `hml`/`hmr`.
+
+## Layout design
+
+### Decidere su hold-trigger-key-positions
+
+Prima di rimuovere le restrizioni posizionali, analizza i dotfiles:
+- `tmux.conf`: qual è il prefix? Coinvolge tasti stesso lato?
+- `nvim` keymaps: Ctrl+H/J/K/L (right hand) funzionano già con restrizioni left-mod + right-key
+- `zsh` bindkeys: raramente critici per questa decisione
+
+Regola: rimuovi hold-trigger-key-positions solo se la maggioranza delle combo critiche è same-hand. Se sono 1-2 combo problematiche, usa macro dedicate invece — preservi i benefici anti-misfire.
+
+### Thumb cluster
+
+Se un modificatore è sulla home row (es. `S=LALT`), il suo thumb key equivalente è ridondante. Rimpiazzalo con una macro ad alta frequenza.
+
+Pattern efficace: **left thumb macro + right hand command** = flusso naturale per prefix-based tools (tmux, ecc.). Esempio: `tmux_prefix` sul thumb sinistro esterno → mano destra libera per h/j/k/l.
