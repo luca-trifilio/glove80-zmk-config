@@ -55,3 +55,12 @@ Regola: rimuovi hold-trigger-key-positions solo se la maggioranza delle combo cr
 Se un modificatore è sulla home row (es. `S=LALT`), il suo thumb key equivalente è ridondante. Rimpiazzalo con una macro ad alta frequenza.
 
 Pattern efficace: **left thumb macro + right hand command** = flusso naturale per prefix-based tools (tmux, ecc.). Esempio: `tmux_prefix` sul thumb sinistro esterno → mano destra libera per h/j/k/l.
+
+### Modifier placement ergonomics
+
+Non mettere il modifier più usato sul mignolo — è il dito più debole e affatica.
+Su macOS: Cmd è il modifier più frequente → va sull'**indice** (F/J).
+
+Layout testato e funzionante:
+- `A=Shift  S=Opt  D=Ctrl  F=Cmd` (sinistra)
+- `J=Cmd  K=Ctrl  L=Opt  ;=Shift` (destra, specchio)
