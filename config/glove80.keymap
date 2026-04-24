@@ -147,33 +147,6 @@
         };
     };
 
-    underglow-layer {
-        compatible = "zmk,underglow-layer";
-
-        /*
-         * Color scheme:
-         *   PURPLE  = pinky column
-         *   BLUE    = ring column
-         *   GREEN   = middle column
-         *   ORANGE  = index columns (inner + outer)
-         *   RED     = home row mods (A S D F  J K L ;)
-         *   YELLOW  = thumb cluster keys
-         *   ___     = off (F-keys, number row, misc)
-         */
-
-        base {
-            bindings = <
-&ug ___    &ug ___    &ug ___    &ug ___    &ug ___                                                                                      &ug ___    &ug ___    &ug ___    &ug ___    &ug ___
-&ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___                                                              &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___
-&ug PURPLE &ug BLUE   &ug GREEN  &ug ORANGE &ug ORANGE &ug ORANGE                                                           &ug ORANGE &ug ORANGE &ug ORANGE &ug GREEN  &ug BLUE   &ug PURPLE
-&ug PURPLE &ug RED    &ug RED    &ug RED    &ug RED    &ug ORANGE                                                           &ug ORANGE &ug RED    &ug RED    &ug RED    &ug RED    &ug PURPLE
-&ug PURPLE &ug BLUE   &ug GREEN  &ug ORANGE &ug ORANGE &ug ORANGE &ug YELLOW &ug YELLOW &ug YELLOW  &ug YELLOW &ug YELLOW &ug YELLOW &ug ORANGE &ug ORANGE &ug GREEN  &ug GREEN  &ug BLUE   &ug PURPLE
-&ug PURPLE &ug ___    &ug ___    &ug ___    &ug ___               &ug YELLOW &ug YELLOW &ug YELLOW  &ug YELLOW &ug YELLOW &ug YELLOW            &ug ___    &ug ___    &ug ___    &ug ___    &ug PURPLE
-            >;
-            layer-id = <LAYER_Base>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
