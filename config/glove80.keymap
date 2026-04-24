@@ -159,10 +159,10 @@
             bindings = <
 &kp F1                &kp F2        &kp F3       &kp F4        &mt LG(LS(NUMBER_4)) F5                                                                                        &mt RG(RS(NUMBER_4)) F6  &kp F7        &kp F8       &kp F9           &kp F10
 &kp EQUAL             &kp N1        &kp N2       &kp N3        &kp N4                   &kp N5                                                                        &kp N6  &kp N7                   &kp N8        &kp N9       &kp N0           &kp MINUS
-&kp TAB               &kp Q         &kp W        &kp E         &kp R                    &kp T                                                                         &kp Y   &kp U                    &kp I         &kp O        &kp P            &kp BSLH
-&esc_ctrl LCTRL ESC   &hml LCTRL A  &hml LALT S  &hml LSHFT D  &hml LGUI F              &kp G                                                                         &kp H   &hmr RGUI J              &hmr RSHFT K  &hmr LALT L  &hmr LCTRL SEMI  &kp SQT
-&kp GRAVE             &kp Z         &kp X        &kp C         &kp V                    &kp B   &kp LSHFT  &kp LGUI  &lower    &kp LCTRL         &kp RGUI  &kp RSHFT  &kp N   &kp M                    &kp COMMA     &kp DOT      &kp FSLH         &kp PG_UP
-&magic LAYER_Magic 0  &kp HOME      &kp END      &kp LEFT      &kp RIGHT                        &kp BSPC   &kp DEL   &kp LALT  &kp LC(LG(LALT))  &kp RET   &kp SPACE          &kp UP                   &kp DOWN      &kp LBKT     &kp RBKT         &kp PG_DN
+&kp LSHFT             &kp Q         &kp W        &kp E         &kp R                    &kp T                                                                         &kp Y   &kp U                    &kp I         &kp O        &kp P            &kp BSLH
+&esc_ctrl LCTRL ESC   &hml LGUI A   &hml LALT S  &hml LCTRL D  &hml LSHFT F             &kp G                                                                         &kp H   &hmr RSHFT J             &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
+&kp GRAVE             &kp Z         &kp X        &kp C         &kp V                    &kp B   &kp TAB    &kp LGUI  &lower    &kp LCTRL         &kp RGUI  &kp RSHFT  &kp N   &kp M                    &kp COMMA     &kp DOT      &kp FSLH         &kp PG_UP
+&magic LAYER_Magic 0  &kp HOME      &kp END      &kp LEFT      &kp RIGHT                        &kp BSPC   &kp DEL   &tmux_prefix  &kp LC(LG(LALT))  &kp RET   &kp SPACE          &kp UP                   &kp DOWN      &kp LBKT     &kp RBKT         &kp PG_DN
             >;
         };
 
